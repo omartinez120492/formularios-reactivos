@@ -1,0 +1,26 @@
+<h2>Páginas</h2>
+<hr>
+<h3 class="text-primary mt-3">Reactivos</h3>
+<ul class="list-group" role="menu">
+  @for (item of reactiveMenu; track item.route) {
+  <!-- TODO: Cuidado!!-->
+  <!-- TODO: routerLink: para usarlo se debe importar RouterModule en el modulo -->
+  <li class="list-group-item"
+      [routerLink]="item.route"
+      role="menuitem"
+      [routerLinkActive]="['active']">
+    {{ item.title }}
+  </li>
+  }
+</ul>
+<hr>
+<h3 class="text-primary mt-3">Autenticación</h3>
+<ul class="list-group" role="menu">
+  @for (item of authMenu; track item.route) {
+  <li class="list-group-item"
+      [routerLink]="item.route"
+      role="menuitem"
+      [routerLinkActive]="['active']">
+    {{ item.title }}
+  </li>
+}
